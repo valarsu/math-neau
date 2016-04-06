@@ -39,14 +39,18 @@
  <div class="pleft">
   <div class="bignews">
    <!--头条-->
-   <div class="onenews"> {dede:arclist flag='h' limit='0,1' infolen='230'}
-    <h2><a href="[field:arcurl/]">[field:title/]</a></h2>
-    <p>[field:info/]...<a href="[field:arcurl/]">[查看全文]</a></p>
-    {/dede:arclist} </div>
+<div class="onenews">
+    {dede:arclist flag='h' limit='0,1' infolen='230'}
+        <h2><a href="[field:arcurl/]">[field:title/]</a></h2>
+        <p>[field:info/]...<a href="[field:arcurl/]">[查看全文]</a></p>
+    {/dede:arclist}
+</div>
    <!-- /onenews -->
-   <div class="d1"> {dede:arclist flag='h' limit='1,4'}
-    <div class='d1arc'><a href="[field:arcurl/]">[field:title/]</a></div>
-    {/dede:arclist} </div>
+<div class="d1">
+    {dede:arclist flag='h' limit='1,4'}
+        <div class='d1arc'><a href="[field:arcurl/]">[field:title/]</a></div>
+    {/dede:arclist}
+</div>
    <!--/头条-->
    <div class='newarticle'>最新文章</div>
    <ul class="c2 ico1">
