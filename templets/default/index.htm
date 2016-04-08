@@ -1,5 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}"/>
@@ -9,6 +8,7 @@
     <link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css"/>
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/public/style/base.css"/>
     <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/public/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/public/js/jquery.min.js"/>
     <meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
     <script type="text/javascript">
         if (window.location.toString().indexOf('pref=padindex') != -1) {
@@ -55,6 +55,84 @@
 <body class="index">
 {dede:include filename="head.htm"/}
 <!-- /header -->
+<div class="banner">
+    <div class="container">
+        <!-- banner Slider starts Here -->
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 4
+                $("#slider4").responsiveSlides({
+                    auto: true,
+                    pager: true,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    before: function () {
+                        $('.events').append("<li>before event fired.</li>");
+                    },
+                    after: function () {
+                        $('.events').append("<li>after event fired.</li>");
+                    }
+                });
+
+            });
+        </script>
+        <!--//End-slider-script-->
+        <div  id="top" class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                <li>
+                    <div class="banner-info">
+                        <h1>Job Searching Just Got So Easy</h1>
+                        <p>Consectetur adipisicing elit, sed do lorem ipsum dolor sit amet,  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="banner-info">
+                        <h1>Tempor incididunt ut labore</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut .</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="banner-info">
+                        <h1>Consectetur adipisicing elit</h1>
+                        <p>Eiusmod tempor incididunt lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+        <!-- banner Slider Ends Here -->
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <div class="w960 center clear mt1">
     <div class="pleft">
         <div class="bignews">

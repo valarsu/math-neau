@@ -1,3 +1,6 @@
+@import "style.css";
+@import "flexslider.css";
+@import "swipebox.css";
 body,
 html,
 * {
@@ -5,6 +8,9 @@ html,
   padding: 0;
   box-sizing: border-box;
   font-family: "Microsoft YaHei";
+}
+body {
+  padding-top: 79px;
 }
 .clearfix {
   clear: both;
@@ -25,6 +31,10 @@ li {
 .header {
   width: 1349px;
   margin: 0 auto;
+  box-shadow: 3px 3px 10px 0 #999;
+  position: fixed;
+  top: 0;
+  background: #fff;
 }
 .header .header-top {
   width: 1140px;
@@ -61,9 +71,10 @@ li {
   -ms-transition: 0.5s all;
 }
 .header .head-nav {
+  width: 70%;
   float: left;
-  width: 63.8%;
-  margin: 0 auto;
+  margin-left: 55px;
+  margin-top: 17px;
 }
 .header .head-nav ul {
   margin: 0;
@@ -113,6 +124,10 @@ li {
 .header .head-nav ul li.active a {
   color: #202020;
 }
+.header .head-nav li.active a::after {
+  opacity: 1;
+  bottom: 10px;
+}
 .header ul a:hover,
 .header ul a:focus {
   outline: none;
@@ -131,9 +146,11 @@ li {
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
 }
 .header .header-nav a:hover::after,
 .header .header-nav a:focus::after {
   opacity: 1;
-  bottom: 4px;
+  bottom: 0;
+  transform: translateY(0);
 }

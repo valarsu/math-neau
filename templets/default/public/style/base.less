@@ -1,8 +1,14 @@
+@import "style.css";
+@import "flexslider.css";
+@import "swipebox.css";
 body, html, * {
   magin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Microsoft YaHei";
+}
+body{
+  padding-top: 79px;
 }
 @main-green:#319453;
 @main-color:#758594;
@@ -25,6 +31,10 @@ ul, li {
 .header {
   width: 1349px;
   margin: 0 auto;
+  box-shadow: 3px 3px 10px 0 #999;
+  position: fixed;
+  top: 0;
+  background: #fff;
   .header-top{
     width: 1140px;
     margin: 0 auto;
@@ -62,9 +72,10 @@ ul, li {
     -ms-transition:0.5s all;
   }
   .head-nav {
+    width: 70%;
     float: left;
-    width: 63.8%;
-    margin: 0 auto;
+    margin-left: 55px;
+    margin-top: 17px;
   }
   .head-nav ul{
     margin:0;
@@ -114,6 +125,14 @@ ul, li {
   .head-nav ul li a:hover, .head-nav ul li.active a{
     color:#202020;
   }
+  .head-nav{
+    li.active{
+      a::after{
+        opacity: 1;
+        bottom: 10px;
+      }
+    }
+  }
   ul a:hover,
   ul a:focus {
     outline: none;
@@ -132,16 +151,14 @@ ul, li {
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     -moz-transition: opacity 0.3s, -moz-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s;
-//    -webkit-transform: translateY(10px);
-//    -moz-transform: translateY(10px);
-//    transform: translateY(10px);
+    transform: translateY(10px);
   }
   .header-nav a:hover::after,
   .header-nav a:focus::after {
     opacity: 1;
-    bottom: 4px;
-//    -webkit-transform: translateY(0px);
-//    -moz-transform: translateY(0px);
-//    transform: translateY(0px);
+    bottom: 0;
+    transform: translateY(0);
   }
 }
+
+
