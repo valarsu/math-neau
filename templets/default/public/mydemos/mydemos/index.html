@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../dist/css/swiper.min.css">
+    <link rel="stylesheet" href="../animate-css/animate.min.css">
+    <link rel="stylesheet" href="../animate-css/reset-animate.css">
+
+    <!-- Demo styles -->
+    <style>
+    *{margin:0;padding: 0;}
+    html, body {
+        position: relative;
+        height: 100%;
+        color: #f2f2f2;
+        font-family: 'Microsoft Yahei',Tahoma,Helvetica,Arial,sans-serif;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide>div{
+        width:100%;
+        height:100%;
+        background-color: #fefae6;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .swiper-slide-active>div{
+        opacity: 1;
+    }
+
+    #audio_btn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 200;
+        /*display: none;*/
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+    }
+    .off{
+        background-image: url(./img/normalmusic.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .rotate {
+        -webkit-animation: rotating 1.2s linear infinite;
+        -moz-animation: rotating 1.2s linear infinite;
+        -o-animation: rotating 1.2s linear infinite;
+        animation: rotating 1.2s linear infinite;
+    }
+    @-webkit-keyframes rotating{
+        from{-webkit-transform:rotate(0deg)}
+        to{-webkit-transform:rotate(360deg)}
+    }
+    @keyframes rotating{
+        from{transform:rotate(0deg)}
+        to{transform:rotate(360deg)}
+    }
+    @-moz-keyframes rotating{
+        from{-moz-transform:rotate(0deg)}
+        to{-moz-transform:rotate(360deg)}
+    }
+
+    .u-arrow-bottom {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        z-index: 150;
+        width: 24px;
+        height: 14px;
+        margin-left: -7px;
+    }
+    .pre-wrap {
+        width: 24px;
+        height: 14px;
+        position: relative;
+        -webkit-animation: start 1.5s infinite ease-in-out;
+        -moz-animation: start 1.5s infinite ease-in-out;
+        animation: start 1.5s infinite ease-in-out;
+    }
+    .pre-box1, .pre-box2 {
+        height: 15px;
+        width: 11px;
+        position: absolute;
+        top: -5px;
+        overflow: hidden;
+    }
+    .pre-box2 {
+        left: 10px;
+    }
+    .pre1,
+    .pre2 {
+        background-color: #fff;
+        width: 14px;
+        height: 5px;
+        border-radius: 2px;
+        position: absolute;
+        box-shadow: 1px -1px 1px #646464;
+        top: 5px;
+    }
+    .pre1{
+        transform: rotate(130deg);
+        -webkit-transform: rotate(130deg);
+        left: 1px;
+    }
+    .pre2 {
+        left: -4.5px;
+        -webkit-transform: rotate(50deg);
+        transform: rotate(50deg);
+    }
+    @-moz-keyframes start{
+        0%,30%{opacity:0;-moz-transform:translate(0,10px)}
+        60%{opacity:1;-moz-transform:translate(0,0)}
+        100%{opacity:0;-moz-transform:translate(0,-8px)}
+    }
+    @keyframes start{
+        0%,30%{opacity:0;transform:translate(0,10px)}
+        60%{opacity:1;transform:translate(0,0)}
+        100%{opacity:0;transform:translate(0,-8px)}
+    }
+
+    /*padding值设置*/
+    .pl10{padding-left: 10px;}
+    .pl20{padding-left: 20px;}
+    .pl30{padding-left: 30px;}
+    .pl40{padding-left: 40px;}
+    .pl50{padding-left: 50px;}
+    .pl60{padding-left: 60px;}
+    .pl70{padding-left: 70px;}
+    .pl80{padding-left: 80px;}
+    .pl90{padding-left: 90px;}
+    .pl100{padding-left: 100px;}
+
+    .pr10{padding-right: 10px;}
+    .pr20{padding-right: 20px;}
+    .pr30{padding-right: 30px;}
+    .pr40{padding-right: 40px;}
+    .pr50{padding-right: 50px;}
+    .pr60{padding-right: 60px;}
+    .pr70{padding-right: 70px;}
+    .pr80{padding-right: 80px;}
+    .pr90{padding-right: 90px;}
+    .pr100{padding-right: 100px;}
+
+    .pt10{padding-top: 10px;}
+    .pt20{padding-top: 20px;}
+    .pt30{padding-top: 30px;}
+    .pt40{padding-top: 40px;}
+    .pt50{padding-top: 50px;}
+    .pt60{padding-top: 60px;}
+    .pt70{padding-top: 70px;}
+    .pt80{padding-top: 80px;}
+    .pt90{padding-top: 90px;}
+    .pt100{padding-top: 100px;}
+
+    .pb10{padding-bottom: 10px;}
+    .pb20{padding-bottom: 20px;}
+    .pb30{padding-bottom: 30px;}
+    .pb40{padding-bottom: 40px;}
+    .pb50{padding-bottom: 50px;}
+    .pb60{padding-bottom: 60px;}
+    .pb70{padding-bottom: 70px;}
+    .pb80{padding-bottom: 80px;}
+    .pb90{padding-bottom: 90px;}
+    .pb100{padding-bottom: 100px;}
+
+    .mt10{margin-top: 10px;}
+    .mt20{margin-top: 20px;}
+    .mt30{margin-top: 30px;}
+    .mt40{margin-top: 40px;}
+    .mt50{margin-top: 50px;}
+    .mt60{margin-top: 60px;}
+    .mt70{margin-top: 70px;}
+    .mt80{margin-top: 80px;}
+    .mt90{margin-top: 90px;}
+    .mt100{margin-top: 100px;}
+
+    .w50percent{width: 50%;}
+    .w60percent{width: 60%;}
+    .w70percent{width: 70%;}
+    .w80percent{width: 80%;}
+    .w90percent{width: 90%;}
+
+    /*文本对齐方式*/
+    .text-align-c{text-align: center;}
+    .text-align-l{text-align: left;}
+    .text-align-r{text-align: right;}
+
+    /*水平居中*/
+    .w-center{margin-left:auto;margin-right:auto;}
+
+    .red{color: #ff5722;}
+    .line1px{width:100%;height: 1px;background-color: #333;}
+    .line2px{width:100%;height: 1px;background-color: #333;}
+    .line-dotted{width:100%;border-bottom: 4px dotted #333;}
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="./css/template_1.css">
+</head>
+<body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <!-- 以wrap-*来区分页，已i-*来区分内容块 -->
+                <div class="wrap-1">
+                    <div class="inner">
+
+                        <div class="i-1">
+                            <h1 class="title-1 animated bounceInLeft" am-duration="1500" am-delay="">淘房点点 / </h1>
+                            <h1 class="title-2 animated bounceInRight" am-duration="1500" am-delay="500">/ 买房省一点</h1>
+                        </div>
+
+                        <div class="i-2">
+                            <div class="line1px animated fadeInLeft" am-duration="1500" am-delay="2000"></div>
+                            <div class="title animated fadeInUp" am-duration="1500" am-delay="2000">2016新湖·果岭郁金香花博会开启</div>
+                            <div class="line1px animated fadeInRight " am-duration="1500" am-delay="2000"></div>
+                            <div class="animated fadeInUp line-dotted pt10" am-duration="1500" am-delay="2000"></div>
+                        </div>
+
+                        <div class="i-3">
+                            <div class="s-style-1 animated flipInY w-center text-align-l" am-duration="1500" am-delay="3500">今年新湖·果岭郁金香花博会的主旨就是：年年郁金香，幸福不一样！周周有活动，天天嗨不停！</div>
+                        </div>
+
+                        <img class="animated rotateInDownLeft flower-1" am-duration="1500" am-delay="3500" src="./img/flower-1.png" alt="" />
+                        <img class="animated rotateInDownRight flower-2" am-duration="1500" am-delay="3500" src="./img/flower-2.png" alt="" />
+
+                        <h2 id="testAnimate" class="animated bounce pt50" data-animate="bounce">淘房点点</h2>
+                        <button onclick="prev()" style="position:relative;z-index: 999;">上一个</button>
+                        <button onclick="next()" style="position:relative;z-index: 999;">下一个</button>
+                    
+                        <section class="u-arrow-bottom">
+                            <div class="pre-wrap">
+                                <div class="pre-box1">
+                                    <div class="pre1"></div>
+                                </div>
+                                <div class="pre-box2">
+                                    <div class="pre2"></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap-2">
+                    <div class="i-1">
+                        <h2 class="title-2 animated rubberBand" am-duration="500">/ <em>活动详情</em> /</h2>
+                    </div>
+                    <div class="i-2">
+                        <div class="s-style-1 animated flipInY" am-duration="1000" am-delay="500">今年新湖·果岭郁金香花博会的主旨就是：年年郁金香，幸福不一样！周周有活动，天天嗨不停！</div>
+                    </div>
+                    <div class="i-3">
+                        <p class="animated slideInLeft" am-duration="500" am-delay="1500"><i class="i-style-2"></i> 2016新湖·果岭郁金香花博会</p>
+                        <p class="animated slideInLeft" am-duration="500" am-delay="2000"><i class="i-style-2"></i> 时间：2016年3月</p>
+                        <p class="animated slideInLeft" am-duration="500" am-delay="2500"><i class="i-style-2"></i> 地点：新湖·菲林园区（新湖·果岭以南100米</p>
+                    </div>
+                    <div class="i-4 animated fadeIn" am-duration="3000" am-delay="2500">
+                        <div class="fuzzy"></div>
+                    </div>
+                    <section class="u-arrow-bottom">
+                        <div class="pre-wrap">
+                            <div class="pre-box1">
+                                <div class="pre1"></div>
+                            </div>
+                            <div class="pre-box2">
+                                <div class="pre2"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap-3">
+                    <div class="i-1">
+                        <h2 class="title-2">/ <em>楼盘介绍</em> /</h2>
+                    </div>
+                    <div class="i-2">
+                        <p>产权年限：70年</p>
+                        <p>装修情况：毛坯</p>
+                        <p>项目特色：观景居所 小户型</p>
+                    </div>
+                    <div class="i-3">
+                        <div>
+                            <span>均价：<b>9500元/㎡</b></span>
+                            <img src="">
+                        </div>
+                    </div>
+                    <div class="i-4">
+                        <p>所属板块：仓前</p>
+                        <p>开发商：<br>浙江新兰得置业有限公司
+                        </p>
+                        <p>楼盘地址：<br>城西文一西路和东西大道交叉口南侧</p>
+                    </div>
+                    <section class="u-arrow-bottom">
+                        <div class="pre-wrap">
+                            <div class="pre-box1">
+                                <div class="pre1"></div>
+                            </div>
+                            <div class="pre-box2">
+                                <div class="pre2"></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="wrap-4">
+                    <div class="i-1">
+                        <div class="title">2016新湖·果岭郁金香花博会</div>
+                        <div class="line1px animated fadeInLeft"></div>
+                    </div>
+                    <div class="i-2">·<br>·<br>·</div>
+                    <div class="i-3">等/待/您/的/到/来</div>
+                    <div class="i-4">·<br>·<br>·</div>
+                    <div class="i-5">
+                        <a class="btn" href="javascript:;">参与活动</a>
+                        <a class="btn" href="javascript:;">分享</a>
+                    </div>
+                    <div class="i-6">
+                        <div class="logo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <div id="audio_btn" class="off video_exist rotate" >
+        <!-- <audio loop="" src="http://res.eqxiu.com/group3/M00/BC/1A/yq0KZVXVmBGAG0BiAAaU8zV7Z3Q572.mp3" id="media" autoplay="" preload=""></audio> -->
+    </div>
+    <!-- Swiper JS -->
+    <script src="../dist/js/swiper.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/sly.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: false,
+        direction: 'vertical',
+        loop: false
+    });
+
+    var animationNameArr = [".bounce", ".flash", ".pulse", ".rubberBand", ".shake", ".swing", ".tada", ".wobble", ".bounceIn", ".bounceInDown", ".bounceInLeft", ".bounceInRight", ".bounceInUp", ".bounceOut", ".bounceOutDown", ".bounceOutLeft", ".bounceOutRight", ".bounceOutUp", ".fadeIn", ".fadeInDown", ".fadeInDownBig", ".fadeInLeft", ".fadeInLeftBig", ".fadeInRight", ".fadeInRightBig", ".fadeInUp", ".fadeInUpBig", ".fadeOut", ".fadeOutDown", ".fadeOutDownBig", ".fadeOutLeft", ".fadeOutLeftBig", ".fadeOutRight", ".fadeOutRightBig", ".fadeOutUp", ".fadeOutUpBig", ".flipInX", ".flipInY", ".flipOutX", ".flipOutY", ".lightSpeedIn", ".lightSpeedOut", ".rotateIn", ".rotateInDownLeft", ".rotateInDownRight", ".rotateInUpLeft", ".rotateInUpRight", ".rotateOut", ".rotateOutDownLeft", ".rotateOutDownRight", ".rotateOutUpLeft", ".rotateOutUpRight", ".hinge", ".rollIn", ".rollOut", ".zoomIn", ".zoomInDown", ".zoomInLeft", ".zoomInRight", ".zoomInUp", ".zoomOut", ".zoomOutDown", ".zoomOutLeft", ".zoomOutRight", ".zoomOutUp", ".slideInDown", ".slideInLeft", ".slideInRight", ".slideInUp", ".slideOutDown", ".slideOutLeft", ".slideOutRight", ".slideOutUp"];
+
+    for (var i = 0,len=animationNameArr.length;i<len;i++){
+
+    }
+
+    var maxLen = animationNameArr.length;
+
+    function getRandom(start, end) {
+        return Math.floor(Math.random()*end+start);
+    }
+
+    var begin = 0;
+
+    function prev() {
+        begin--;
+        if (begin<0){
+            begin = maxLen-1;
+            alert("到最后一个了")
+        }
+        toggle();
+        
+    }
+    function next() {
+        begin++;
+        console.log(begin);
+        if (begin>maxLen-1){
+            begin = 0;
+            alert("到第一个了");
+        }
+        toggle();
+    }
+
+    function toggle() {
+        var testDom = document.getElementById("testAnimate");
+        var lastAnimate = testDom.getAttribute("data-animate");
+        var nowAnimate = animationNameArr[begin].split(".")[1];
+
+        testDom.classList.remove(lastAnimate);
+        testDom.classList.add(nowAnimate);
+        testDom.setAttribute("data-animate", nowAnimate);
+    }
+
+    var audioBtn = document.getElementById("audio_btn");
+    var audio = audioBtn.children[0];
+    var playing = true;
+    audioBtn.onclick = function(){
+        if (playing) {
+            audio.pause();
+            audioBtn.classList.remove("rotate");
+            playing = false;
+        } else {
+            audio.play();
+            audioBtn.classList.add("rotate");
+            playing = true;
+        }
+    }
+    </script>
+</body>
+</html>

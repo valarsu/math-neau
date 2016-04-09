@@ -1,0 +1,591 @@
+/*重新覆盖animate.css，以此来让页面active的时候再加载动画*/
+.bounce,
+.flash,
+.pulse,
+.rubberBand,
+.shake,
+.swing,
+.tada,
+.wobble,
+.bounceIn,
+.bounceInDown,
+.bounceInLeft,
+.bounceInRight,
+.bounceInUp,
+.bounceOut,
+.bounceOutDown,
+.bounceOutLeft,
+.bounceOutRight,
+.bounceOutUp,
+.fadeIn,
+.fadeInDown,
+.fadeInDownBig,
+.fadeInLeft,
+.fadeInLeftBig,
+.fadeInRight,
+.fadeInRightBig,
+.fadeInUp,
+.fadeInUpBig,
+.fadeOut,
+.fadeOutDown,
+.fadeOutDownBig,
+.fadeOutLeft,
+.fadeOutLeftBig,
+.fadeOutRight,
+.fadeOutRightBig,
+.fadeOutUp,
+.fadeOutUpBig,
+.flipInX,
+.flipInY,
+.flipOutX,
+.flipOutY,
+.lightSpeedIn,
+.lightSpeedOut,
+.rotateIn,
+.rotateInDownLeft,
+.rotateInDownRight,
+.rotateInUpLeft,
+.rotateInUpRight,
+.rotateOut,
+.rotateOutDownLeft,
+.rotateOutDownRight,
+.rotateOutUpLeft,
+.rotateOutUpRight,
+.hinge,
+.rollIn,
+.rollOut,
+.zoomIn,
+.zoomInDown,
+.zoomInLeft,
+.zoomInRight,
+.zoomInUp,
+.zoomOut,
+.zoomOutDown,
+.zoomOutLeft,
+.zoomOutRight,
+.zoomOutUp,
+.slideInDown,
+.slideInLeft,
+.slideInRight,
+.slideInUp,
+.slideOutDown,
+.slideOutLeft,
+.slideOutRight,
+.slideOutUp {
+    -webkit-animation-name: "";
+    animation-name: "";
+}
+.swiper-slide-active .bounce{
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+}
+.swiper-slide-active .flash{
+    -webkit-animation-name: flash;
+    animation-name: flash;
+}
+.swiper-slide-active .pulse{
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+.swiper-slide-active .rubberBand{
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+}
+.swiper-slide-active .shake{
+    -webkit-animation-name: shake;
+    animation-name: shake;
+}
+.swiper-slide-active .swing{
+    -webkit-animation-name: swing;
+    animation-name: swing;
+}
+.swiper-slide-active .tada{
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+.swiper-slide-active .wobble{
+    -webkit-animation-name: wobble;
+    animation-name: wobble;
+}
+.swiper-slide-active .bounceIn{
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+}
+.swiper-slide-active .bounceInDown{
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+}
+.swiper-slide-active .bounceInLeft{
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+}
+.swiper-slide-active .bounceInRight{
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+}
+.swiper-slide-active .bounceInUp{
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp;
+}
+.swiper-slide-active .bounceOut{
+    -webkit-animation-name: bounceOut;
+    animation-name: bounceOut;
+}
+.swiper-slide-active .bounceOutDown{
+    -webkit-animation-name: bounceOutDown;
+    animation-name: bounceOutDown;
+}
+.swiper-slide-active .bounceOutLeft{
+    -webkit-animation-name: bounceOutLeft;
+    animation-name: bounceOutLeft;
+}
+.swiper-slide-active .bounceOutRight{
+    -webkit-animation-name: bounceOutRight;
+    animation-name: bounceOutRight;
+}
+.swiper-slide-active .bounceOutUp{
+    -webkit-animation-name: bounceOutUp;
+    animation-name: bounceOutUp;
+}
+.swiper-slide-active .fadeIn{
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.swiper-slide-active .fadeInDown{
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+.swiper-slide-active .fadeInDownBig{
+    -webkit-animation-name: fadeInDownBig;
+    animation-name: fadeInDownBig;
+}
+.swiper-slide-active .fadeInLeft{
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+.swiper-slide-active .fadeInLeftBig{
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+.swiper-slide-active .fadeInRight{
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+.swiper-slide-active .fadeInRightBig{
+    -webkit-animation-name: fadeInRightBig;
+    animation-name: fadeInRightBig;
+}
+.swiper-slide-active .fadeInUp{
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.swiper-slide-active .fadeInUpBig{
+    -webkit-animation-name: fadeInUpBig;
+    animation-name: fadeInUpBig;
+}
+.swiper-slide-active .fadeOut{
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+.swiper-slide-active .fadeOutDown{
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+}
+.swiper-slide-active .fadeOutDownBig{
+    -webkit-animation-name: fadeOutDownBig;
+    animation-name: fadeOutDownBig;
+}
+.swiper-slide-active .fadeOutLeft{
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
+}
+.swiper-slide-active .fadeOutLeftBig{
+    -webkit-animation-name: fadeOutLeftBig;
+    animation-name: fadeOutLeftBig;
+}
+.swiper-slide-active .fadeOutRight{
+    -webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+}
+.swiper-slide-active .fadeOutRightBig{
+    -webkit-animation-name: fadeOutRightBig;
+    animation-name: fadeOutRightBig;
+}
+.swiper-slide-active .fadeOutUp{
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+}
+.swiper-slide-active .fadeOutUpBig{
+    -webkit-animation-name: fadeOutUpBig;
+    animation-name: fadeOutUpBig;
+}
+.swiper-slide-active .flipInX{
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
+.swiper-slide-active .flipInY{
+    -webkit-animation-name: flipInY;
+    animation-name: flipInY;
+}
+.swiper-slide-active .flipOutX{
+    -webkit-animation-name: flipOutX;
+    animation-name: flipOutX;
+}
+.swiper-slide-active .flipOutY{
+    -webkit-animation-name: flipOutY;
+    animation-name: flipOutY;
+}
+.swiper-slide-active .lightSpeedIn{
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+}
+.swiper-slide-active .lightSpeedOut{
+    -webkit-animation-name: lightSpeedOut;
+    animation-name: lightSpeedOut;
+}
+.swiper-slide-active .rotateIn{
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+}
+.swiper-slide-active .rotateInDownLeft{
+    -webkit-animation-name: rotateInDownLeft;
+    animation-name: rotateInDownLeft;
+}
+.swiper-slide-active .rotateInDownRight{
+    -webkit-animation-name: rotateInDownRight;
+    animation-name: rotateInDownRight;
+}
+.swiper-slide-active .rotateInUpLeft{
+    -webkit-animation-name: rotateInUpLeft;
+    animation-name: rotateInUpLeft;
+}
+.swiper-slide-active .rotateInUpRight{
+    -webkit-animation-name: rotateInUpRight;
+    animation-name: rotateInUpRight;
+}
+.swiper-slide-active .rotateOut{
+    -webkit-animation-name: rotateOut;
+    animation-name: rotateOut;
+}
+.swiper-slide-active .rotateOutDownLeft{
+    -webkit-animation-name: rotateOutDownLeft;
+    animation-name: rotateOutDownLeft;
+}
+.swiper-slide-active .rotateOutDownRight{
+    -webkit-animation-name: rotateOutDownRight;
+    animation-name: rotateOutDownRight;
+}
+.swiper-slide-active .rotateOutUpLeft{
+    -webkit-animation-name: rotateOutUpLeft;
+    animation-name: rotateOutUpLeft;
+}
+.swiper-slide-active .rotateOutUpRight{
+    -webkit-animation-name: rotateOutUpRight;
+    animation-name: rotateOutUpRight;
+}
+.swiper-slide-active .hinge{
+    -webkit-animation-name: hinge;
+    animation-name: hinge;
+}
+.swiper-slide-active .rollIn{
+    -webkit-animation-name: rollIn;
+    animation-name: rollIn;
+}
+.swiper-slide-active .rollOut{
+    -webkit-animation-name: rollOut;
+    animation-name: rollOut;
+}
+.swiper-slide-active .zoomIn{
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+.swiper-slide-active .zoomInDown{
+    -webkit-animation-name: zoomInDown;
+    animation-name: zoomInDown;
+}
+.swiper-slide-active .zoomInLeft{
+    -webkit-animation-name: zoomInLeft;
+    animation-name: zoomInLeft;
+}
+.swiper-slide-active .zoomInRight{
+    -webkit-animation-name: zoomInRight;
+    animation-name: zoomInRight;
+}
+.swiper-slide-active .zoomInUp{
+    -webkit-animation-name: zoomInUp;
+    animation-name: zoomInUp;
+}
+.swiper-slide-active .zoomOut{
+    -webkit-animation-name: zoomOut;
+    animation-name: zoomOut;
+}
+.swiper-slide-active .zoomOutDown{
+    -webkit-animation-name: zoomOutDown;
+    animation-name: zoomOutDown;
+}
+.swiper-slide-active .zoomOutLeft{
+    -webkit-animation-name: zoomOutLeft;
+    animation-name: zoomOutLeft;
+}
+.swiper-slide-active .zoomOutRight{
+    -webkit-animation-name: zoomOutRight;
+    animation-name: zoomOutRight;
+}
+.swiper-slide-active .zoomOutUp{
+    -webkit-animation-name: zoomOutUp;
+    animation-name: zoomOutUp;
+}
+.swiper-slide-active .slideInDown{
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+}
+.swiper-slide-active .slideInLeft{
+    -webkit-animation-name: slideInLeft;
+    animation-name: slideInLeft;
+}
+.swiper-slide-active .slideInRight{
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+}
+.swiper-slide-active .slideInUp{
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+}
+.swiper-slide-active .slideOutDown{
+    -webkit-animation-name: slideOutDown;
+    animation-name: slideOutDown;
+}
+.swiper-slide-active .slideOutLeft{
+    -webkit-animation-name: slideOutLeft;
+    animation-name: slideOutLeft;
+}
+.swiper-slide-active .slideOutRight{
+    -webkit-animation-name: slideOutRight;
+    animation-name: slideOutRight;
+}
+.swiper-slide-active .slideOutUp{
+    -webkit-animation-name: slideOutUp;
+    animation-name: slideOutUp;
+}
+
+
+
+/*===============================*/
+/*随便写了点*/
+/*animation的delay*/
+.animation-delay-500{
+    -webkit-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.fly-from-l{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate3d(-100%,0,0);
+    -ms-transform: translate3d(-100%,0,0);
+    -o-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+    width: 100%;
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+.swiper-slide-active .fly-from-l{
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.duration-500{
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+}
+.duration-400{
+    -webkit-transition-duration: .4s;
+    -o-transition-duration: .4s;
+    transition-duration: .4s;
+}
+.duration-300{
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+}
+.duration-200{
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+}
+.duration-100{
+    -webkit-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    transition-duration: .1s;
+}
+.timefunc-linear{
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+.animation-delay-100,
+.animated[am-delay="100"]{
+    -webkit-animation-delay: .1s;
+    -o-animation-delay: .1s;
+    animation-delay: .1s; 
+}
+.animation-delay-200,
+.animated[am-delay="200"]{
+    -webkit-animation-delay: .2s;
+    -o-animation-delay: .2s;
+    animation-delay: .2s; 
+}
+.animation-delay-300,
+.animated[am-delay="300"]{
+    -webkit-animation-delay: .3s;
+    -o-animation-delay: .3s;
+    animation-delay: .3s; 
+}
+.animation-delay-400,
+.animated[am-delay="400"]{
+    -webkit-animation-delay: .4s;
+    -o-animation-delay: .4s;
+    animation-delay: .4s;   
+}
+.animation-delay-500,
+.animated[am-delay="500"]{
+    -webkit-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s;
+}
+.animation-delay-600,
+.animated[am-delay="600"]{
+    -webkit-animation-delay: .6s;
+    -o-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.animation-delay-700,
+.animated[am-delay="700"]{
+    -webkit-animation-delay: .7s;
+    -o-animation-delay: .7s;
+    animation-delay: .7s;
+}
+.animation-delay-800,
+.animated[am-delay="800"]{
+    -webkit-animation-delay: .8s;
+    -o-animation-delay: .8s;
+    animation-delay: .8s;
+}
+.animation-delay-900,
+.animated[am-delay="900"]{
+    -webkit-animation-delay: .9s;
+    -o-animation-delay: .9s;
+    animation-delay: .9s;
+}
+.animation-delay-1000,
+.animated[am-delay="1000"]{
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.animation-delay-1100,
+.animated[am-delay="1100"]{
+    -webkit-animation-delay: 1.1s;
+    -o-animation-delay: 1.1s;
+    animation-delay: 1.1s;
+}
+.animation-delay-1200,
+.animated[am-delay="1200"]{
+    -webkit-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.animation-delay-1300,
+.animated[am-delay="1300"]{
+    -webkit-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+.animation-delay-1400,
+.animated[am-delay="1400"]{
+    -webkit-animation-delay: 1.4s;
+    -o-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+.animation-delay-1500,
+.animated[am-delay="1500"]{
+    -webkit-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.animation-delay-2000,
+.animated[am-delay="2000"]{
+    -webkit-animation-delay: 2s;
+    -o-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.animation-delay-2500,
+.animated[am-delay="2500"]{
+    -webkit-animation-delay: 2.5s;
+    -o-animation-delay: 2.5s;
+    animation-delay: 2.5s;
+}
+.animation-delay-3000,
+.animated[am-delay="3000"]{
+    -webkit-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.animation-delay-3500,
+.animated[am-delay="3500"]{
+    -webkit-animation-delay: 23.5s;
+    -o-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+
+
+.animation-duration-1000,
+.animated[am-duration="1000"]{
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.animation-duration-1250,
+.animated[am-duration="1250"]{
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+}
+.animation-duration-1500,
+.animated[am-duration="1500"]{
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.animation-duration-1750,
+.animated[am-duration="1750"]{
+    -webkit-animation-duration: 1.75s;
+    animation-duration: 1.75s;
+}
+.animation-duration-2000,
+.animated[am-duration="2000"]{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+.animation-duration-2250,
+.animated[am-duration="2250"]{
+    -webkit-animation-duration: 2.25s;
+    animation-duration: 2.25s;
+}
+.animation-duration-2500,
+.animated[am-duration="2500"]{
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+.animation-duration-2750,
+.animated[am-duration="2750"]{
+    -webkit-animation-duration: 2.75s;
+    animation-duration: 2.75s;
+}
+.animation-duration-3000,
+.animated[am-duration="3000"]{
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+}
